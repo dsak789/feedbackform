@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://dhondi.ai/logos/jntugv.png" type="image/x-icon">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <title>Student Feedback Report</title>
+    <script>
+         
+        
+        down=()=>{
+            if( vnull()) {
+            document.getElementById("download").style.display="none";
+            var main = (document.getElementById('main'));
+            var opt = {
+            margin:       0,
+            filename:     'Student Feedback.pdf',
+            image:        { type: 'jpeg', quality: 0.98},
+            html2canvas:  { scale:  3,scrollY:0 },
+            jsPDF:        { unit: 'in', format: 'A4', orientation: 'portrait' }
+            };
+            html2pdf().from(main).set(opt).save();
+
+        }
+        
+        }
+        function vnull(){
+            vacdyr=document.getElementById("acdyr").value;
+            vyear=document.getElementById("year").value;
+            vsem=document.getElementById("sem").value;
+            vbranch=document.getElementById("branch").value;
+            vfaculty=document.getElementById("faculty").value;
+            vtotalstd=document.getElementById("totalstd").value;
+            vsub=document.getElementById("sub").value;
+            vkots=document.getElementById("kots").value;
+            vcwpftc=document.getElementById("cwpftc").value;
+            vgce=document.getElementById("gce").value;
+            vcoln=document.getElementById("coln").value;
+            vcaav=document.getElementById("caav").value;
+            vhtaosttc=document.getElementById("htaosttc").value;
+            vpmmtittb=document.getElementById("pmmtittb").value;
+            vctctdos=document.getElementById("ctctdos").value;
+            vqapid=document.getElementById("qapid").value;
+            vasadwd=document.getElementById("asadwd").value;
+            vwthseooc=document.getElementById("wthseooc").value;
+            vprit=document.getElementById("prit").value;
+            vftts=document.getElementById("ftts").value;
+            vcos=document.getElementById("cos").value;
+            vtasa=document.getElementById("tasa").value;
+            vdtos=document.getElementById("dtos").value;
+            
+            if(vacdyr!="" && vyear!="" && vsem!="" && vbranch!="" && vfaculty!="" && vtotalstd!="" && vsub!="" && 
+                vkots!="" && vcwpftc!="" && vgce!="" && vcoln!="" && vcaav!="" && vhtaosttc!="" && vpmmtittb!="" && 
+                vctctdos!="" && vqapid!="" && vasadwd!="" && vwthseooc!="" && vprit!="" && vftts!="" &&  vcos!="" && 
+                vtasa!="" && vdtos!=""){
+                    alert("Thank you Giving Feedback");
+                    return true;
+                }
+                else{
+                    alert("Please Fill All Required fileds");
+                    return false;
+                }
+        }
+        disp=()=>{
+            if(vnull()){
+                
+                print()
+                
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            justify-content: center;
+            align-items: center;
+        }
+        #main{
+            min-width: 780px ;
+            max-width: 780px ;
+            background-color: white;
+        }
+        #clgbanner{
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            justify-content: center ;
+            align-items: center;
+            gap: 0px;
+            font-family:Arial, Helvetica, sans-serif;
+            width: 100%;
+        }
+        #clgbanner img{
+            height: 140px;
+            width: 140px;
+        }
+        #clgbanner #logo{
+            display: flex;
+            flex-direction: column;
+            padding-top: 2%;
+            gap: 5px;
+        }
+        #hod{
+            display: flex; 
+            flex-direction: row; 
+            justify-content: space-between;
+        }
+
+        #container{
+            margin: 02px 12px 02px 12px;
+        }
+        #container>p{
+            display: flex;
+            flex-direction: row;
+            padding: 5px;
+            justify-content: space-between;
+        }
+        #container>p> input[type=datetime-loacl]{
+            border: none;
+        }
+        #container1{
+            display: flex;
+            flex-direction: column;
+        }
+        #container1 h3{
+            text-align: center;
+        }
+        #sfbrmain{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border: 5px double black;
+            outline: 2px double black;
+            border-radius: 40px;
+            padding: 20PX;
+        }
+        #sfbrmain p{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        #sfbrmain input{
+            border: 0px  solid black;
+            border-bottom:1px solid black;
+            text-align: start;
+        }
+        table{
+            border: 2px double black;
+            border-right: none;
+            border-bottom: none;
+            empty-cells: show;
+            min-width: 100%;
+        }
+        th,td{
+            
+            padding: 5.9px;
+            border: 2px double black;
+            border-left: none;
+            border-top: none;
+            align-items: end;
+            justify-content: end;
+            text-align: start;
+            
+        }
+        table td input[type=radio]{
+            margin-left: 10%;
+            width: 50px;
+            height: 1.5em;
+            
+            
+        }
+        table td input[type=number]{
+            width: 50px;
+            height: 40px;
+            text-align: center;
+            
+            
+        }
+        input[type=submit],button{
+            margin: 15px 7% 15px 0%;
+            border-radius: 25px;
+            height: 30px;
+            width: 200px;
+            background-color: green;
+            border: 2px dashed green;
+        }
+        input[type=radio]:checked{
+            visibility: visible;
+            accent-color: green;
+        }
+        
+        @media print{
+            body{
+                visibility: hidden ;
+            }
+            
+            #container,hr{
+                margin: 02px 12px 02px 12px;
+            }
+            #sfbrmain input[type=text], input{
+                border: none;
+            }
+            input[type=radio]{
+                visibility: hidden;
+            }
+            input[type=radio]:checked{
+                visibility: visible;
+                accent-color: green;
+            }
+            #main{
+                min-width: 1000px;
+                max-width: 1000px;
+                visibility: visible;
+            }
+        }
+        </style>
+    <div id="main">
+        <div id="clgbanner">
+            <!-- <img src="jntugv.png" alt="JNTUGV LOGO" height="100" width="100"> -->
+            <img src="https://dhondi.ai/logos/jntugv.png" alt="JNTUGV LOGO" height="100" width="100">
+            <div id="logo">
+                <h5>
+                    JNTUGV COLLEGE OF ENGINEERING, VIZIANAGARAM (AUTONOMOUS)
+                </h5>
+                <h4>
+                    JAWAHARLAL NEHRU TECHNOLOGICAL UNIVERSITY GURAJADA, VIZIANAGARAM
+                </h4>
+                <h4>DWARAPUDI, VIZIANAGARAM, ANDHRA PRADESH - 535 003.
+                </h4>
+                <h6>
+                    (A constituent College of JNTUGV & Approved by AICTE, New Delhi) (Recognised by UGC under section 2(F) & 12(B) of UGC Act 1956)
+                </h6>
+                <h3>DEPARTMENT OF INFORMATION TECHNOLOGY</h3>
+                <hr>
+            </div>
+        </div>
+        <div id="container"><br>
+            <div id="hod">
+                <h3>
+                    Dr. B. Tirimula Rao <br>
+                    Asst. Professor & HOD 
+                </h3>
+                <p>
+                    Mobile No: <a href="tel:+918374033622">8374033622</a>  <br>
+                    Email: <a href="mailto:hod.it@jntukucev.ac.in">hod.it@jntukucev.ac.in</a>
+                </p>
+            </div>
+            <div id="container1">
+                <form action="#" id="stdform">
+                <h3>STUDENT FEED-BACK REPORT</h3>
+                <div id="sfbrmain">
+                    <p>
+                        <lable>
+                            Academic Year: <input type="text" id="acdyr" name="acdyr" required>
+                        </lable>
+                        <lable>
+                            Year: <input type="text" id="year" name="year" required>
+                        </lable>
+                        <lable>
+                            Semester: <input type="text" id="sem" name="sem" required>
+                        </lable>
+                    </p>
+                    <p>
+                        <lable>
+                            Branch:&emsp;&emsp; &emsp;<input type="text" id="branch" name="branch" required>                        
+                            &emsp;&emsp;&emsp;&emsp;&emsp;
+                            Faculty: <input type="text" id="faculty" name="faculty" required>
+                        </lable>
+                    </p>
+                    <p>
+                        <lable>
+                            Total Students &ensp;<input type="text" id="totalstd" name="totalstds" required>
+                            &emsp;&emsp;&emsp;&emsp;&emsp;
+                            Subject: <input type="text" id="sub" name="sub"><br>appeared: 
+                        </lable>                                 
+                    </p>
+
+                </div>
+            </div>
+            <table><br>
+                <tr>
+                    <th>SI.NO.</th>
+                    <th>Characteristics</th>
+                    <th>Very Good</th>
+                    <th>Good</th>
+                    <th>Average</th>
+                    <th>Below Average</th>
+                    <th>Poor</th>
+                    <th>Marks</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Knowledge of the Subject</td>
+                    <td><input required type="radio" name="kots" id="kots" value="verygood"></td>
+                    <td><input required type="radio" name="kots" id="kots" value="good"></td>
+                    <td><input required type="radio" name="kots" id="kots" value="average"></td>
+                    <td><input required type="radio" name="kots" id="kots" value="belowaverage"></td>
+                    <td><input required type="radio" name="kots" id="kots" value="poor"></td>
+                    <td><input required type="number" name="markskots" id="kots" ></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Coming well prepared for the Class</td>
+                    <td><input required type="radio" name="cwpftc" id="cwpftc" value="verygood"></td>
+                    <td><input required type="radio" name="cwpftc" id="cwpftc" value="good"></td>
+                    <td><input required type="radio" name="cwpftc" id="cwpftc" value="average"></td>
+                    <td><input required type="radio" name="cwpftc" id="cwpftc" value="belowaverage"></td>
+                    <td><input required type="radio" name="cwpftc" id="cwpftc" value="poor"></td>
+                    <td><input required type="number" name="markscwpftc" id="cwpftc" ></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Giving Clear Explanations</td>
+                    <td><input required  type="radio" name="gce" id="gce" value="verygood"></td>
+                    <td><input required type="radio" name="gce" id="gce" value="good"></td>
+                    <td><input required type="radio" name="gce" id="gce" value="average"></td>
+                    <td><input required type="radio" name="gce" id="gce" value="belowaverage"></td>
+                    <td><input required type="radio" name="gce" id="gce" value="poor"></td>
+                    <td><input required type="number" name="marksgce" id="gec" ></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Command of Language</td>
+                    <td><input required  type="radio" name="coln" id="coln" value="verygood"></td>
+                    <td><input required type="radio" name="coln" id="coln" value="good"></td>
+                    <td><input required type="radio" name="coln" id="coln" value="average"></td>
+                    <td><input required type="radio" name="coln" id="coln" value="belowaverage"></td>
+                    <td><input required type="radio" name="coln" id="coln" value="poor"></td>
+                    <td><input required type="number" name="markscoln" id="coln" ></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Clear and Audible Voice</td>
+                    <td><input required  type="radio" name="caav" id="caav" value="verygood"></td>
+                    <td><input required type="radio" name="caav" id="caav" value="good"></td>
+                    <td><input required type="radio" name="caav" id="caav" value="average"></td>
+                    <td><input required type="radio" name="caav" id="caav" value="belowaverage"></td>
+                    <td><input required type="radio" name="caav" id="caav" value="poor"></td>
+                    <td><input required type="number" name="markscaav" id="caav"></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Holding the attention of students through the Class</td>
+                    <td><input required  type="radio" name="htaosttc" id="htaosttc" value="verygood"></td>
+                    <td><input required type="radio" name="htaosttc" id="htaosttc" value="good"></td>
+                    <td><input required type="radio" name="htaosttc" id="htaosttc" value="average"></td>
+                    <td><input required type="radio" name="htaosttc" id="htaosttc" value="belowaverage"></td>
+                    <td><input required type="radio" name="htaosttc" id="htaosttc" value="poor"></td>
+                    <td><input required type="number" name="markshtaosttc" id="htaosttc" ></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Providing more matter than in the Text Book</td>
+                    <td><input required  type="radio" name="pmmtittb" id="pmmtittb" value="verygood"></td>
+                    <td><input required type="radio" name="pmmtittb" id="pmmtittb" value="good"></td>
+                    <td><input required type="radio" name="pmmtittb" id="pmmtittb" value="average"></td>
+                    <td><input required type="radio" name="pmmtittb" id="pmmtittb" value="belowaverage"></td>
+                    <td><input required type="radio" name="pmmtittb" id="pmmtittb" value="poor"></td>
+                    <td><input required type="number" name="markspmmtittb" id="pmmtittb"></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Capability to clear the doubts of Students</td>
+                    <td><input required  type="radio" name="ctctdos" id="ctctdos" value="verygood"></td>
+                    <td><input required type="radio" name="ctctdos" id="ctctdos" value="good"></td>
+                    <td><input required type="radio" name="ctctdos" id="ctctdos" value="average"></td>
+                    <td><input required type="radio" name="ctctdos" id="ctctdos" value="belowaverage"></td>
+                    <td><input required type="radio" name="ctctdos" id="ctctdos" value="poor"></td>
+                    <td><input required type="number" name="marksctctdos" id="ctctdos"></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Encouraging students to ask questions and 
+                        participate in Discussion</td>
+                    <td><input required  type="radio" name="qapid" id="qapid" value="verygood"></td>
+                    <td><input required type="radio" name="qapid" id="qapid" value="good"></td>
+                    <td><input required type="radio" name="qapid" id="qapid" value="average"></td>
+                    <td><input required type="radio" name="qapid" id="qapid" value="belowaverage"></td>
+                    <td><input required type="radio" name="qapid" id="qapid" value="poor"></td>
+                    <td><input required type="number" name="marksqapid" id="qapid"></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Appreciating students as and when deserving</td>
+                    <td><input required  type="radio" name="asadwd" id="asadwd" value="verygood"></td>
+                    <td><input required type="radio" name="asadwd" id="asadwd" value="good"></td>
+                    <td><input required type="radio" name="asadwd" id="asadwd" value="average"></td>
+                    <td><input required type="radio" name="asadwd" id="asadwd" value="belowaverage"></td>
+                    <td><input required type="radio" name="asadwd" id="asadwd" value="poor"></td>
+                    <td><input required type="number" name="marksasadwd" id="asadwd" ></td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Willingness to help students even out of Class</td>
+                    <td><input required  type="radio" name="wthseooc" id="wthseooc" value="verygood"></td>
+                    <td><input required type="radio" name="wthseooc" id="wthseooc" value="good"></td>
+                    <td><input required type="radio" name="wthseooc" id="wthseooc" value="average"></td>
+                    <td><input required type="radio" name="wthseooc" id="wthseooc" value="belowaverage"></td>
+                    <td><input required type="radio" name="wthseooc" id="wthseooc" value="poor"></td>
+                    <td><input required type="number" name="markswthseooc" id="wthseooc" ></td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Return of valued Test Papers / Records in Time</td>
+                    <td><input required  type="radio" name="prit" id="prit" value="verygood"></td>
+                    <td><input required type="radio" name="prit" id="prit" value="good"></td>
+                    <td><input required type="radio" name="prit" id="prit" value="average"></td>
+                    <td><input required type="radio" name="prit" id="prit" value="belowaverage"></td>
+                    <td><input required type="radio" name="prit" id="prit" value="poor"></td>
+                    <td><input required type="number" name="marksprit" id="prit"></td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Punctuality and following Time Table Schedule</td>
+                    <td><input required  type="radio" name="ftts" id="ftts" value="verygood"></td>
+                    <td><input required type="radio" name="ftts" id="ftts" value="good"></td>
+                    <td><input required type="radio" name="ftts" id="ftts" value="average"></td>
+                    <td><input required type="radio" name="ftts" id="ftts" value="belowaverage"></td>
+                    <td><input required type="radio" name="ftts" id="ftts" value="poor"></td>
+                    <td><input required type="number" name="marksftts" id="ftts" ></td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Coverage of Syllabus</td>
+                    <td><input required  type="radio" name="cos" id="cos" value="verygood"></td>
+                    <td><input required type="radio" name="cos" id="cos" value="good"></td>
+                    <td><input required type="radio" name="cos" id="cos" value="average"></td>
+                    <td><input required type="radio" name="cos" id="cos" value="belowaverage"></td>
+                    <td><input required type="radio" name="cos" id="cos" value="poor"></td>
+                    <td><input required type="number" name="markscos" id="cos" ></td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td> Impartial (Treating all students alike)</td>
+                    <td><input required  type="radio" name="tasa" id="tasa" value="verygood"></td>
+                    <td><input required type="radio" name="tasa" id="tasa" value="good"></td>
+                    <td><input required type="radio" name="tasa" id="tasa" value="average"></td>
+                    <td><input required type="radio" name="tasa" id="tasa" value="belowaverage"></td>
+                    <td><input required type="radio" name="tasa" id="tasa" value="poor"></td>
+                    <td><input required type="number" name="markstasa" id="tasa" ></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table><br>
+            <p>Note:Feed back was collected in <input type="datetime-local" name="dtos" id="dtos"> from those students having more than 75% attendance.</p>
+            <hr>
+        </div>
+    </div>
+    <div id="download">
+        For Better Resolution use Print option:
+        <input type="submit"  value="Submit To Store Details">
+    </form>
+        <button id="download" onclick="down()" value="Submit To Download Pdf ">Submit To Download Pdf</button>
+        <button id="download" onclick="disp()" name="disp" value="Submit To Print">Submit To Print</button>
+    </div>
+</body>
+</html>
